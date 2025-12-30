@@ -1,0 +1,27 @@
+2025-12-29
+在anaconda中搭建开发环境
+python = 3.13
+pytorch = 13.0（安装命令，见官网教程）
+CUDA = 13.1（安装命令，见官网教程）
+
+在新创建的CUDA环境中安装jupyter note
+conda install nb_conda_kernels
+
+dataset练习
+python中用__init__(self)函数完成class的初始化
+__getitem(self, idx)函数只有在程序引用到具体实例时才会被调用
+
+导入dataset：from torch.utils.data import Dataset
+导入图片操作： from PIL import Image
+导入文件相关： import os
+
+图片dataset的组织方式
+1. 只存放图片，用图片的文件名作为数据的label存放图片，用图片的文件名作为数据的label
+2. 图片和label分别存放在不同的文件中，label以同名的txt文件存放
+
+疑问：
+1. 目前还没有numpy和pandas相关调用，在conda中似乎没有安装相关的lib
+2. 需要学习opencv，这是更加主流的图片处理lib
+
+
+
