@@ -44,6 +44,12 @@ Transforms的使用
 2. 通过transforms实例的方法直接导入图片
 3. 可以将tensor类型的图片直接导入torch的tensorboard
 
-
+2025-01-04，2025-01-05
+useful transform method
+ToTensor
+Normalize
+Resize
+Compose
+RandomCrop
 
 
