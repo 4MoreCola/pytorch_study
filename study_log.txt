@@ -56,5 +56,22 @@ RandomCrop
 1. 下载，训练，使用pytorch标准数据集
 2. 手动下载pytorch数据集以及如何查找数据集的下载地址
 
+2025-01-20
+使用dataloader从dataset中抽取样本
+
+类
+class torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=None, sampler=None, batch_sampler=None, num_workers=0, collate_fn=None, pin_memory=False, drop_last=False, timeout=0, worker_init_fn=None, multiprocessing_context=None, generator=None, *, prefetch_factor=None, persistent_workers=False, pin_memory_device='', in_order=True)
+
+关键参数
+batch_size (int, optional) – how many samples per batch to load (default: 1). # 每次抽取样本的数量
+shuffle (bool, optional) – set to True to have the data reshuffled at every epoch (default: False). # 每次抽取之前是否乱序
+num_workers (int, optional) – how many subprocesses to use for data loading. 0 means that the data will be loaded in the main process. (default: 0) # 是否使用多进程（windows下可能会报错）
+drop_last (bool, optional) – set to True to drop the last incomplete batch, if the dataset size is not divisible by the batch size. If False and the size of dataset is not divisible by the batch size, then the last batch will be smaller. (default: False) # 如果最后剩余的样本数少于batch_size，是否舍去
+
+在fstring中，"{{}}"转义为"{}"
+tensorboard中，可以在log文件夹中删去相应的输出文件，重新运行tensorboard命令来移除网页中错误的tag
+
+
+
 
 
