@@ -52,4 +52,9 @@ Resize
 Compose
 RandomCrop
 
+2025-01-20
+1. 下载，训练，使用pytorch标准数据集
+2. 手动下载pytorch数据集以及如何查找数据集的下载地址
+
+
 
