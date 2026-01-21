@@ -38,13 +38,13 @@ img = Image.open("img_path")
 img_arr = np.array(img)
 write.add_image(tag, img_arr, step, dataformats) #dataformats需要根据img_arr.shape()修改
 
-2025-01-03
+2026-01-03
 Transforms的使用
 1. 创建transforms实例
 2. 通过transforms实例的方法直接导入图片
 3. 可以将tensor类型的图片直接导入torch的tensorboard
 
-2025-01-04，2025-01-05
+2026-01-04，2026-01-05
 useful transform method
 ToTensor
 Normalize
@@ -52,11 +52,11 @@ Resize
 Compose
 RandomCrop
 
-2025-01-20
+2026-01-20
 1. 下载，训练，使用pytorch标准数据集
 2. 手动下载pytorch数据集以及如何查找数据集的下载地址
 
-2025-01-20
+2026-01-20
 使用dataloader从dataset中抽取样本
 
 类
@@ -70,6 +70,20 @@ drop_last (bool, optional) – set to True to drop the last incomplete batch, if
 
 在fstring中，"{{}}"转义为"{}"
 tensorboard中，可以在log文件夹中删去相应的输出文件，重新运行tensorboard命令来移除网页中错误的tag
+
+2026-01-21
+学习torch.nn.Containers
+
+class Model(nn.Module): # class Model 继承于父类 nn.module
+    def __init__(self) -> None:
+        super().__init__() # 调用父类的初始化函数（必须步骤）
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+		# forward中 
+        x = F.relu(self.conv1(x)) # x先经过一次卷积self.covl(x)，再经过一次非线性处理F.relu()
+        return F.relu(self.conv2(x)) # 在经过一次卷积self.conv2(x)，在经过一次非线性处理F.relu()
 
 
 
