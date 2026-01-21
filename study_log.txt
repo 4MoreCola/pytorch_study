@@ -85,6 +85,17 @@ class Model(nn.Module): # class Model 继承于父类 nn.module
         x = F.relu(self.conv1(x)) # x先经过一次卷积self.covl(x)，再经过一次非线性处理F.relu()
         return F.relu(self.conv2(x)) # 在经过一次卷积self.conv2(x)，在经过一次非线性处理F.relu()
 
+2026-01-21
+学习torch.nn.functional.conv2d
+torch.nn.functional.conv2d(input, weight, bias=None, stride=1, padding=0, dilation=1, groups=1)
+
+input – input tensor of shape (minibatch, in_channels, iH, iW). # 输入
+weight – filters of shape (out_channels, m_channels/groups, kH, kW). # 权重，亦称卷积核
+bias – optional bias tensor of shape (out_channels). Default: None # 偏置
+stride – the stride of the convolving kernel. Can be a single number or a tuple (sH, sW). Default: 1 # 步幅/步长
+padding – implicit paddings on both sides of the input. Can be a string {‘valid’, ‘same’}, single number or a tuple (padH, padW). Default: 0 padding='valid' is the same as no padding. padding='same' pads the input so the output has the same shape as the input. However, this mode doesn’t support any stride values other than 1. # 在矩阵的周围进行padding个元素默认值为0的填充，padding要求stride为1
+
+ 
 
 
 
