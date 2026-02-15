@@ -119,7 +119,9 @@ return_indices (bool) – if True, will return the max indices along with the ou
 ceil_mode (bool) – when True, will use ceil instead of floor to compute the output shape # 切换ceil和floor模式（向下取整floor/向上取整ceil）
 最大池化的作用（目的）：在保留输入数据特征的情况下减小数据量
  
-
+2026-02-15
+非线性变化
+在dataset中加入非线性特征以便于后期处理
 
 
 
