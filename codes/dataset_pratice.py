@@ -28,7 +28,7 @@ class MyData(Dataset):
     def __len__(self):
         return len(self.img_path)
 
-root_dir = "dataset/train"
+root_dir = "../dataset/train"
 ants_dir = "ants"
 bees_dir = "bees"
 ants_label_dir = "ants_label"

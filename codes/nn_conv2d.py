@@ -25,7 +25,7 @@ witt = Witt()
 # print(witt)
 
 step = 0
-writer = SummaryWriter("nn_conv2d_logs")
+writer = SummaryWriter("../logs/nn_conv2d_logs")
 
 for data in dataloader:
     imgs, targets = data

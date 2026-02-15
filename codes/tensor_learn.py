@@ -2,7 +2,7 @@ from torch.utils.tensorboard import SummaryWriter
 from PIL import Image
 import numpy as np
 
-writer = SummaryWriter("logs")
+writer = SummaryWriter("../logs")
 img_path1 = "dataset/train/ants/5650366_e22b7e1065.jpg"
 img_path2 = "dataset/train/bees/16838648_415acd9e3f.jpg"
 img_path3 = "dataset/train/ants/0013035.jpg"

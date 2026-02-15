@@ -5,12 +5,12 @@ from torchvision import transforms
 # python usage --> data type: tensor
 # transforms.
 
-img_path = "dataset/train/ants/0013035.jpg"
-img_path_abs = "F:\\py_torch projects\\dataset\\train\\ants\\0013035.jpg"
+img_path = "../dataset/train/ants/0013035.jpg"
+img_path_abs = "/dataset/train/ants/0013035.jpg"
 img = Image.open(img_path)
 print(img)
 
-writer = SummaryWriter("logs")
+writer = SummaryWriter("../logs")
 
 # 1. how to use transforms?
 tensor_trans = transforms.ToTensor()
