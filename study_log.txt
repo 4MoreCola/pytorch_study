@@ -123,5 +123,13 @@ ceil_mode (bool) – when True, will use ceil instead of floor to compute the ou
 非线性变化
 在dataset中加入非线性特征以便于后期处理
 
+2026-02-25
+Normalization Layer正则化层，对输入正则化，加快神经网络的训练速度
+Recurrent Layer，用于文字识别
+Transformer Layer
+Dropout Layer，防止过拟合
+Sparse Layers，自然语言处理
+Linear Layer线性层
+
 
 
